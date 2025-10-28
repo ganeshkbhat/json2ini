@@ -7,16 +7,16 @@ ini parser will have following functions
 var ini = new INIParser();
 
 ```
-### ini.parse
+#### ini.parse
 
-### ini.get
+#### ini.get
 
-### ini.set
+#### ini.set
 
-### ini.delete
+#### ini.delete
 
-### ini.toJSON
+#### ini.toJSON
 
-### ini.stringify
+#### ini.stringify
 
 
