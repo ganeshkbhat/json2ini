@@ -1,7 +1,9 @@
 # parse ini
 ini to json and json to ini parser
 
-ini parser will have following functions
+
+#### INIParser
+INIParser > ini parser  will have following functions
 
 ```
 let sampleINI = '\n' +
