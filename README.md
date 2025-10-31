@@ -3,7 +3,7 @@ ini to json and json to ini parser
 
 
 #### INIParser
-the demo for the latest version is in the demos folder 
+the demo for the latest version is in the [demos folder](https://github.com/ganeshkbhat/json2ini/blob/main/demos/demo.two.js)
 
 #### parseIni
 parse ini and convert to json
