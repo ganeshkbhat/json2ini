@@ -3,64 +3,55 @@ ini to json and json to ini parser
 
 
 #### INIParser
-INIParser > ini parser  will have following functions
+the demo for the latest version is in the demos folder 
 
-```
-let sampleINI = '\n' +
-'[Database]\n' +
-'host = 127.0.0.1\n' +
-'port = 5432\n' +
-var ini = new INIParser();
-```
-
-#### ini.parse
+#### parseIni
 parse ini and convert to json
 
 ```
-parser.parse(sampleINI);
-parser.toJSON()
+const { parseIni, stringifyIni }
 ```
 
-
-#### ini.get
-get the value of a specific ini key
-
 ```
-parser.get('Database', 'host');
-// value of Database.host
+parseIni(inistring)
 ```
 
-
-#### ini.set
-set the Database.timeout_seconds to value 30
-
-```
-parser.set('Database', 'timeout_seconds', 30);
-// new value of Database.timeout_seconds is 30
-```
-
-
-#### ini.delete
+#### stringifyIni
+parse ini and convert to json
 
 ```
-parser.delete('Features', 'max_retries');
-deletes the key Features.max_retries;
+stringifyIni(inistring)
 ```
 
-
-#### ini.toJSON
-converts value to a json value
-
 ```
-parser.parse(sampleINI);
-parser.toJSON()
-```
+const initialIniString = `
+; This is a comment
+[Database]
+host = localhost
+port = 3306
+user = app_user
+password = S3cr3tP@ssw0rd
 
+[Settings]
+debug_mode = true
+max_connections = 50
+timeout_seconds = 30
+`;
 
-#### ini.stringify
-converts value to a string
+const configJson = parseIni(initialIniString);
 
-```
-var finalINI = parser.stringify();
-// converts value to a string
+// Change values
+configJson.Database.port = 5432;
+configJson.Settings.debug_mode = false;
+configJson.Settings.log_level = 'info';
+
+// Add a brand new section
+configJson.Features = {
+    caching_enabled: true,
+    cache_ttl: 3600
+};
+
+const newIniString = stringifyIni(configJson);
+console.log(newIniString);
+
 ```
