@@ -1,5 +1,5 @@
 {
-  "name": "parse-ini",
+  "name": "parseini",
   "version": "1.2.0",
   "description": "parse ini files and convert two fro to json and ini",
   "main": "index.js",
