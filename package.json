@@ -1,6 +1,6 @@
 {
   "name": "parse-ini",
-  "version": "1.0.0",
+  "version": "1.2.0",
   "description": "parse ini files and convert two fro to json and ini",
   "main": "index.js",
   "scripts": {
